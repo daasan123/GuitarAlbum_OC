@@ -21,6 +21,7 @@
 		D00C69BB1C01903500093933 /* GAChordView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69BA1C01903500093933 /* GAChordView.m */; };
 		D00C69BE1C01906500093933 /* GAChord.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69BD1C01906500093933 /* GAChord.m */; };
 		D0762AF81C01969700924A6D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D0762AF71C01969700924A6D /* UIView+Extension.m */; };
+		D0762AFB1C01EE7F00924A6D /* GARhythm.m in Sources */ = {isa = PBXBuildFile; fileRef = D0762AFA1C01EE7F00924A6D /* GARhythm.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		D00C69C01C0191E100093933 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		D0762AF61C01969700924A6D /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		D0762AF71C01969700924A6D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		D0762AF91C01EE7F00924A6D /* GARhythm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GARhythm.h; sourceTree = "<group>"; };
+		D0762AFA1C01EE7F00924A6D /* GARhythm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GARhythm.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +207,8 @@
 			children = (
 				D00C69BC1C01906500093933 /* GAChord.h */,
 				D00C69BD1C01906500093933 /* GAChord.m */,
+				D0762AF91C01EE7F00924A6D /* GARhythm.h */,
+				D0762AFA1C01EE7F00924A6D /* GARhythm.m */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0762AF81C01969700924A6D /* UIView+Extension.m in Sources */,
+				D0762AFB1C01EE7F00924A6D /* GARhythm.m in Sources */,
 				D00C69B81C01902900093933 /* GABeatView.m in Sources */,
 				D00C69BB1C01903500093933 /* GAChordView.m in Sources */,
 				D00C69AB1C018EFE00093933 /* AlbumVC.m in Sources */,

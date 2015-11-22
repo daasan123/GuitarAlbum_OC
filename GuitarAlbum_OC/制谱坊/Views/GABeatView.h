@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "GAChord.h"
+#import "GARhythm.h"
 
 @interface GABeatView : UIView
 @property (nonatomic, strong) GAChord *chord;
+@property (nonatomic, strong) GARhythm *rhythm;
 @end
