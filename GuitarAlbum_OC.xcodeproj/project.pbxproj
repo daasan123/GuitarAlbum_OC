@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		D00C696A1C018DAF00093933 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69691C018DAF00093933 /* main.m */; };
 		D00C696D1C018DAF00093933 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C696C1C018DAF00093933 /* AppDelegate.m */; };
-		D00C69701C018DAF00093933 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C696F1C018DAF00093933 /* ViewController.m */; };
 		D00C69731C018DAF00093933 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00C69711C018DAF00093933 /* Main.storyboard */; };
 		D00C69751C018DAF00093933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00C69741C018DAF00093933 /* Assets.xcassets */; };
 		D00C69781C018DAF00093933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00C69761C018DAF00093933 /* LaunchScreen.storyboard */; };
 		D00C69831C018DAF00093933 /* GuitarAlbum_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69821C018DAF00093933 /* GuitarAlbum_OCTests.m */; };
 		D00C698E1C018DAF00093933 /* GuitarAlbum_OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C698D1C018DAF00093933 /* GuitarAlbum_OCUITests.m */; };
+		D00C69AB1C018EFE00093933 /* AlbumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69AA1C018EFE00093933 /* AlbumVC.m */; };
+		D00C69AE1C018F3700093933 /* FactoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69AD1C018F3700093933 /* FactoryVC.m */; };
+		D00C69B51C01901400093933 /* GAChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69B41C01901400093933 /* GAChartView.m */; };
+		D00C69B81C01902900093933 /* GABeatView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69B71C01902900093933 /* GABeatView.m */; };
+		D00C69BB1C01903500093933 /* GAChordView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69BA1C01903500093933 /* GAChordView.m */; };
+		D00C69BE1C01906500093933 /* GAChord.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69BD1C01906500093933 /* GAChord.m */; };
+		D0762AF81C01969700924A6D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D0762AF71C01969700924A6D /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +45,6 @@
 		D00C69691C018DAF00093933 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D00C696B1C018DAF00093933 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D00C696C1C018DAF00093933 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D00C696E1C018DAF00093933 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D00C696F1C018DAF00093933 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D00C69721C018DAF00093933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D00C69741C018DAF00093933 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D00C69771C018DAF00093933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,22 @@
 		D00C69891C018DAF00093933 /* GuitarAlbum_OCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuitarAlbum_OCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00C698D1C018DAF00093933 /* GuitarAlbum_OCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuitarAlbum_OCUITests.m; sourceTree = "<group>"; };
 		D00C698F1C018DAF00093933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00C69A91C018EFE00093933 /* AlbumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumVC.h; sourceTree = "<group>"; };
+		D00C69AA1C018EFE00093933 /* AlbumVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumVC.m; sourceTree = "<group>"; };
+		D00C69AC1C018F3700093933 /* FactoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactoryVC.h; sourceTree = "<group>"; };
+		D00C69AD1C018F3700093933 /* FactoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactoryVC.m; sourceTree = "<group>"; };
+		D00C69B31C01901400093933 /* GAChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAChartView.h; sourceTree = "<group>"; };
+		D00C69B41C01901400093933 /* GAChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAChartView.m; sourceTree = "<group>"; };
+		D00C69B61C01902900093933 /* GABeatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GABeatView.h; sourceTree = "<group>"; };
+		D00C69B71C01902900093933 /* GABeatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GABeatView.m; sourceTree = "<group>"; };
+		D00C69B91C01903500093933 /* GAChordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAChordView.h; sourceTree = "<group>"; };
+		D00C69BA1C01903500093933 /* GAChordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAChordView.m; sourceTree = "<group>"; };
+		D00C69BC1C01906500093933 /* GAChord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAChord.h; sourceTree = "<group>"; };
+		D00C69BD1C01906500093933 /* GAChord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAChord.m; sourceTree = "<group>"; };
+		D00C69BF1C01912100093933 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D00C69C01C0191E100093933 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		D0762AF61C01969700924A6D /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D0762AF71C01969700924A6D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +121,12 @@
 		D00C69671C018DAF00093933 /* GuitarAlbum_OC */ = {
 			isa = PBXGroup;
 			children = (
+				D0762AF51C01969700924A6D /* Category */,
+				D00C69A71C018EC800093933 /* 曲谱库 */,
+				D00C69A81C018EC800093933 /* 制谱坊 */,
 				D00C696B1C018DAF00093933 /* AppDelegate.h */,
 				D00C696C1C018DAF00093933 /* AppDelegate.m */,
-				D00C696E1C018DAF00093933 /* ViewController.h */,
-				D00C696F1C018DAF00093933 /* ViewController.m */,
+				D00C69C01C0191E100093933 /* Constant.h */,
 				D00C69711C018DAF00093933 /* Main.storyboard */,
 				D00C69741C018DAF00093933 /* Assets.xcassets */,
 				D00C69761C018DAF00093933 /* LaunchScreen.storyboard */,
@@ -118,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D00C69691C018DAF00093933 /* main.m */,
+				D00C69BF1C01912100093933 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +161,73 @@
 				D00C698F1C018DAF00093933 /* Info.plist */,
 			);
 			path = GuitarAlbum_OCUITests;
+			sourceTree = "<group>";
+		};
+		D00C69A71C018EC800093933 /* 曲谱库 */ = {
+			isa = PBXGroup;
+			children = (
+				D00C69AF1C018FB100093933 /* Modules */,
+				D00C69B01C018FB100093933 /* Views */,
+				D00C69A91C018EFE00093933 /* AlbumVC.h */,
+				D00C69AA1C018EFE00093933 /* AlbumVC.m */,
+			);
+			path = "曲谱库";
+			sourceTree = "<group>";
+		};
+		D00C69A81C018EC800093933 /* 制谱坊 */ = {
+			isa = PBXGroup;
+			children = (
+				D00C69B11C018FBB00093933 /* Modules */,
+				D00C69B21C018FBB00093933 /* Views */,
+				D00C69AC1C018F3700093933 /* FactoryVC.h */,
+				D00C69AD1C018F3700093933 /* FactoryVC.m */,
+			);
+			path = "制谱坊";
+			sourceTree = "<group>";
+		};
+		D00C69AF1C018FB100093933 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D00C69B01C018FB100093933 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D00C69B11C018FBB00093933 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D00C69BC1C01906500093933 /* GAChord.h */,
+				D00C69BD1C01906500093933 /* GAChord.m */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D00C69B21C018FBB00093933 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D00C69B31C01901400093933 /* GAChartView.h */,
+				D00C69B41C01901400093933 /* GAChartView.m */,
+				D00C69B61C01902900093933 /* GABeatView.h */,
+				D00C69B71C01902900093933 /* GABeatView.m */,
+				D00C69B91C01903500093933 /* GAChordView.h */,
+				D00C69BA1C01903500093933 /* GAChordView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D0762AF51C01969700924A6D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D0762AF61C01969700924A6D /* UIView+Extension.h */,
+				D0762AF71C01969700924A6D /* UIView+Extension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +360,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D00C69701C018DAF00093933 /* ViewController.m in Sources */,
+				D0762AF81C01969700924A6D /* UIView+Extension.m in Sources */,
+				D00C69B81C01902900093933 /* GABeatView.m in Sources */,
+				D00C69BB1C01903500093933 /* GAChordView.m in Sources */,
+				D00C69AB1C018EFE00093933 /* AlbumVC.m in Sources */,
 				D00C696D1C018DAF00093933 /* AppDelegate.m in Sources */,
+				D00C69BE1C01906500093933 /* GAChord.m in Sources */,
 				D00C696A1C018DAF00093933 /* main.m in Sources */,
+				D00C69AE1C018F3700093933 /* FactoryVC.m in Sources */,
+				D00C69B51C01901400093933 /* GAChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GuitarAlbum_OC/PrefixHeader.pch";
 				INFOPLIST_FILE = GuitarAlbum_OC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wubing.GuitarAlbum-OC";
@@ -424,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GuitarAlbum_OC/PrefixHeader.pch";
 				INFOPLIST_FILE = GuitarAlbum_OC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wubing.GuitarAlbum-OC";
@@ -498,6 +596,7 @@
 				D00C69941C018DAF00093933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D00C69951C018DAF00093933 /* Build configuration list for PBXNativeTarget "GuitarAlbum_OCTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +605,7 @@
 				D00C69971C018DAF00093933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D00C69981C018DAF00093933 /* Build configuration list for PBXNativeTarget "GuitarAlbum_OCUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +614,7 @@
 				D00C699A1C018DAF00093933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
