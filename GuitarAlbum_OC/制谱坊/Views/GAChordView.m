@@ -21,7 +21,6 @@ CGFloat const nameLabelPercent = 0.4;
     if (self)
     {
         _chord = aChord;
-        _type = kChordTypeGuitar;
         self.backgroundColor = [UIColor clearColor];
         
         CGFloat labelHeight = frame.size.height * nameLabelPercent;
@@ -40,7 +39,7 @@ CGFloat const nameLabelPercent = 0.4;
 {
     NSInteger lineCount;
     CGFloat lineWidth = 1;
-    switch (_type)
+    switch (_chord.type)
     {
         case kChordTypeGuitar: lineCount = 6;break;
         default:lineCount = 4;break;

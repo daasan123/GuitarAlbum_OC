@@ -34,6 +34,7 @@
             [tmpPoints addObject:[pointsString substringWithRange:NSMakeRange(i, 1)]];
         }
         chord.points = [NSArray arrayWithArray:tmpPoints];
+        chord.type = tmpPoints.count >4 ? kChordTypeGuitar : kChordTypeUke;
     }
     
     return chord;

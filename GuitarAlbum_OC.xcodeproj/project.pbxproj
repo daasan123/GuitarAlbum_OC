@@ -22,6 +22,7 @@
 		D00C69BE1C01906500093933 /* GAChord.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69BD1C01906500093933 /* GAChord.m */; };
 		D0762AF81C01969700924A6D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D0762AF71C01969700924A6D /* UIView+Extension.m */; };
 		D0762AFB1C01EE7F00924A6D /* GARhythm.m in Sources */ = {isa = PBXBuildFile; fileRef = D0762AFA1C01EE7F00924A6D /* GARhythm.m */; };
+		D0FF169C1C035F06003C4186 /* GARhythmView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FF169B1C035F06003C4186 /* GARhythmView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		D0762AF71C01969700924A6D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		D0762AF91C01EE7F00924A6D /* GARhythm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GARhythm.h; sourceTree = "<group>"; };
 		D0762AFA1C01EE7F00924A6D /* GARhythm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GARhythm.m; sourceTree = "<group>"; };
+		D0FF169A1C035F06003C4186 /* GARhythmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GARhythmView.h; sourceTree = "<group>"; };
+		D0FF169B1C035F06003C4186 /* GARhythmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GARhythmView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +225,8 @@
 				D00C69B71C01902900093933 /* GABeatView.m */,
 				D00C69B91C01903500093933 /* GAChordView.h */,
 				D00C69BA1C01903500093933 /* GAChordView.m */,
+				D0FF169A1C035F06003C4186 /* GARhythmView.h */,
+				D0FF169B1C035F06003C4186 /* GARhythmView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				D00C69BE1C01906500093933 /* GAChord.m in Sources */,
 				D00C696A1C018DAF00093933 /* main.m in Sources */,
 				D00C69AE1C018F3700093933 /* FactoryVC.m in Sources */,
+				D0FF169C1C035F06003C4186 /* GARhythmView.m in Sources */,
 				D00C69B51C01901400093933 /* GAChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
