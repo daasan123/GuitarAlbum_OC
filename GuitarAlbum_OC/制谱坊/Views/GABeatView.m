@@ -8,6 +8,7 @@
 
 #import "GABeatView.h"
 #import "GAChordView.h"
+#import "GARhythmView.h"
 
 @implementation GABeatView
 - (instancetype)initWithFrame:(CGRect)frame
@@ -30,4 +31,17 @@
         [self addSubview:chordView];
     }
 }
+
+- (void)setRhythm:(GARhythm *)rhythm
+{
+    if (_rhythm != rhythm)
+    {
+        _rhythm = nil;
+        _rhythm = rhythm;
+        
+        GARhythmView *rhythmView = [[GARhythmView alloc] initWithFrame:CGRectMake(0, self.width, self.width, self.height - self.width) andRhythm:_rhythm];
+        [self addSubview:rhythmView];
+    }
+}
+
 @end
