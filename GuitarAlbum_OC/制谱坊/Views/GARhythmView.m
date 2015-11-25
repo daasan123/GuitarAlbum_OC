@@ -41,110 +41,169 @@ CGFloat const rhythmMarkBottomGap = 20;
     CGFloat yBottom = height - rhythmMarkBottomGap;
     CGFloat gap = width / 4.0;
     CGFloat deltHeight = rhythmMarkHeight/3.0;// 双线高度增量
+    CGFloat p[4] = {0, 0, 0, 0};
     switch (_rhythm.type)
     {
         // |
         case kRhythmType1:
-            CGContextMoveToPoint(context, gap * 2, yBottom);
-            CGContextAddLineToPoint(context, gap * 2, yTop);
+            p[0] = gap * 2;
+            CGContextMoveToPoint(context, p[0], yBottom);
+            CGContextAddLineToPoint(context, p[0], yTop);
             break;
         // |_|
         case kRhythmType2:
+            p[0] = gap;
+            p[1] = gap * 3;
             CGContextMoveToPoint(context, gap, yTop);
-            CGContextAddLineToPoint(context, gap, yBottom);
-            CGContextAddLineToPoint(context, gap * 3, yBottom);
-            CGContextAddLineToPoint(context, gap * 3, yTop);
+            CGContextAddLineToPoint(context, p[0], yBottom);
+            CGContextAddLineToPoint(context, p[1], yBottom);
+            CGContextAddLineToPoint(context, p[1], yTop);
             break;
         // |._|
         case kRhythmType2_pointLeft:
         {
+            p[0] = gap;
+            p[1] = gap * 3;
             CGFloat tmp = width / 8.0;
-            CGContextMoveToPoint(context, gap, yTop);
-            CGContextAddLineToPoint(context, gap, yBottom);
-            CGContextMoveToPoint(context, gap + tmp / 2.0, yBottom);
-            CGContextAddArc(context, gap + tmp / 2.0, yBottom, tmp / 4.0, 0, 2 * M_PI, 1);
-            CGContextMoveToPoint(context, gap + tmp, yBottom);
-            CGContextAddLineToPoint(context, gap * 3, yBottom);
-            CGContextAddLineToPoint(context, gap * 3, yTop);
+            CGContextMoveToPoint(context, p[0], yTop);
+            CGContextAddLineToPoint(context, p[0], yBottom);
+            CGContextMoveToPoint(context, p[0] + tmp / 2.0, yBottom);
+            CGContextAddArc(context, p[0] + tmp / 2.0, yBottom, tmp / 4.0, 0, 2 * M_PI, 1);
+            CGContextMoveToPoint(context, p[0] + tmp, yBottom);
+            CGContextAddLineToPoint(context, p[1], yBottom);
+            CGContextAddLineToPoint(context, p[1], yTop);
             break;
         }
         // |_.|
         case kRhythmType2_pointRight:
         {
+            p[0] = gap;
+            p[1] = gap * 3;
             CGFloat tmp = width / 8.0;
-            CGContextMoveToPoint(context, gap * 3, yTop);
-            CGContextAddLineToPoint(context, gap * 3, yBottom);
-            CGContextMoveToPoint(context, gap * 3 - tmp / 2.0, yBottom);
-            CGContextAddArc(context, gap * 3 - tmp / 2.0, yBottom, tmp / 4.0, 0, 2 * M_PI, 1);
-            CGContextMoveToPoint(context, gap * 3 - tmp, yBottom);
-            CGContextAddLineToPoint(context, gap, yBottom);
-            CGContextAddLineToPoint(context, gap, yTop);
+            CGContextMoveToPoint(context, p[1], yTop);
+            CGContextAddLineToPoint(context, p[1], yBottom);
+            CGContextMoveToPoint(context, p[1] - tmp / 2.0, yBottom);
+            CGContextAddArc(context, p[1] - tmp / 2.0, yBottom, tmp / 4.0, 0, 2 * M_PI, 1);
+            CGContextMoveToPoint(context, p[1] - tmp, yBottom);
+            CGContextAddLineToPoint(context, p[0], yBottom);
+            CGContextAddLineToPoint(context, p[0], yTop);
             break;
         }
         // |_|_|
         case kRhythmType3:
         {
+            p[0] = gap;
+            p[1] = gap * 2;
+            p[2] = gap * 3;
             CGContextMoveToPoint(context, gap, yTop);
-            CGContextAddLineToPoint(context, gap, yBottom);
-            CGContextAddLineToPoint(context, gap * 2, yBottom);
-            CGContextAddLineToPoint(context, gap * 2, yTop);
-            CGContextMoveToPoint(context, gap * 2, yBottom);
-            CGContextAddLineToPoint(context, gap * 3, yBottom);
-            CGContextAddLineToPoint(context, gap * 3, yTop);
+            CGContextAddLineToPoint(context, p[0], yBottom);
+            CGContextAddLineToPoint(context, p[1], yBottom);
+            CGContextAddLineToPoint(context, p[1], yTop);
+            CGContextMoveToPoint(context, p[1], yBottom);
+            CGContextAddLineToPoint(context, p[2], yBottom);
+            CGContextAddLineToPoint(context, p[2], yTop);
             break;
         }
         // |=|_|
         case kRhythmType3_2left:
         {
+            p[0] = gap;
+            p[1] = gap * 2;
+            p[2] = gap * 3;
             CGContextMoveToPoint(context, gap, yTop);
-            CGContextAddLineToPoint(context, gap, yBottom);
-            CGContextAddLineToPoint(context, gap * 2, yBottom);
-            CGContextAddLineToPoint(context, gap * 2, yTop);
-            CGContextMoveToPoint(context, gap * 2, yBottom);
-            CGContextAddLineToPoint(context, gap * 3, yBottom);
-            CGContextAddLineToPoint(context, gap * 3, yTop);
+            CGContextAddLineToPoint(context, p[0], yBottom);
+            CGContextAddLineToPoint(context, p[1], yBottom);
+            CGContextAddLineToPoint(context, p[1], yTop);
+            CGContextMoveToPoint(context, p[1], yBottom);
+            CGContextAddLineToPoint(context, p[2], yBottom);
+            CGContextAddLineToPoint(context, p[2], yTop);
             
-            CGContextMoveToPoint(context, gap, yBottom - rhythmMarkHeight/3.0);
-            CGContextAddLineToPoint(context, gap * 2, yBottom - rhythmMarkHeight/3.0);
+            CGContextMoveToPoint(context, p[0], yBottom - rhythmMarkHeight/3.0);
+            CGContextAddLineToPoint(context, p[1], yBottom - rhythmMarkHeight/3.0);
             break;
         }
         // |_|=|
         case kRhythmType3_2right:
         {
+            p[0] = gap;
+            p[1] = gap * 2;
+            p[2] = gap * 3;
             CGContextMoveToPoint(context, gap, yTop);
-            CGContextAddLineToPoint(context, gap, yBottom);
-            CGContextAddLineToPoint(context, gap * 2, yBottom);
-            CGContextAddLineToPoint(context, gap * 2, yTop);
-            CGContextMoveToPoint(context, gap * 2, yBottom);
-            CGContextAddLineToPoint(context, gap * 3, yBottom);
-            CGContextAddLineToPoint(context, gap * 3, yTop);
+            CGContextAddLineToPoint(context, p[0], yBottom);
+            CGContextAddLineToPoint(context, p[1], yBottom);
+            CGContextAddLineToPoint(context, p[1], yTop);
+            CGContextMoveToPoint(context, p[1], yBottom);
+            CGContextAddLineToPoint(context, p[2], yBottom);
+            CGContextAddLineToPoint(context, p[2], yTop);
             
-            CGContextMoveToPoint(context, gap * 2, yBottom - deltHeight);
-            CGContextAddLineToPoint(context, gap * 3, yBottom - deltHeight);
+            CGContextMoveToPoint(context, p[1], yBottom - deltHeight);
+            CGContextAddLineToPoint(context, p[2], yBottom - deltHeight);
             break;
         }
-        // |=|=|
+        // |=|=|=|
         case kRhythmType4:
         {
+            gap = width / 5.0;
+            p[0] = gap;
+            p[1] = gap * 2;
+            p[2] = gap * 3;
+            p[3] = gap * 4;
             CGContextMoveToPoint(context, gap, yTop);
-            CGContextAddLineToPoint(context, gap, yBottom);
-            CGContextAddLineToPoint(context, gap * 2, yBottom);
-            CGContextAddLineToPoint(context, gap * 2, yTop);
-            CGContextMoveToPoint(context, gap * 2, yBottom);
-            CGContextAddLineToPoint(context, gap * 3, yBottom);
-            CGContextAddLineToPoint(context, gap * 3, yTop);
+            CGContextAddLineToPoint(context, p[0], yBottom);
+            CGContextAddLineToPoint(context, p[1], yBottom);
+            CGContextAddLineToPoint(context, p[1], yTop);
+            CGContextMoveToPoint(context, p[1], yBottom);
+            CGContextAddLineToPoint(context, p[2], yBottom);
+            CGContextAddLineToPoint(context, p[2], yTop);
+            CGContextMoveToPoint(context, p[2], yBottom);
+            CGContextAddLineToPoint(context, p[3], yBottom);
+            CGContextAddLineToPoint(context, p[3], yTop);
             
             CGFloat tmp = yBottom - deltHeight;
             CGContextMoveToPoint(context, gap, tmp);
-            CGContextAddLineToPoint(context, gap * 2, tmp);
-            CGContextAddLineToPoint(context, gap * 2, yTop);
-            CGContextMoveToPoint(context, gap * 2, tmp);
-            CGContextAddLineToPoint(context, gap * 3, tmp);
-            CGContextAddLineToPoint(context, gap * 3, yTop);
+            CGContextAddLineToPoint(context, p[1], tmp);
+            CGContextAddLineToPoint(context, p[1], yTop);
+            CGContextMoveToPoint(context, p[1], tmp);
+            CGContextAddLineToPoint(context, p[2], tmp);
+            CGContextAddLineToPoint(context, p[2], yTop);
+            CGContextMoveToPoint(context, p[2], tmp);
+            CGContextAddLineToPoint(context, p[3], tmp);
+            CGContextAddLineToPoint(context, p[3], yTop);
             break;
         }
     }
     CGContextStrokePath(context);
+    
+    // 绘制落点
+    CGFloat textHeight = chartLineGap;
+    NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    [style setAlignment:NSTextAlignmentCenter];
+    NSDictionary *styleDict = @{NSFontAttributeName:[UIFont systemFontOfSize:textHeight/1.193], NSParagraphStyleAttributeName:style};
+    for (NSInteger i = 0; i < sizeof(p)/sizeof(NSInteger); i ++)
+    {
+        if (_rhythm.points.count > i)
+        {
+            NSArray *group = _rhythm.points[i];
+            for (NSInteger j = 0; j < group.count; j ++)
+            {
+                NSString *each = group[j];
+                if (each.length > 0)
+                {
+//                    CGContextMoveToPoint(context, p[i], chartLineOffsetY - width + chartLineGap * j);
+//                    CGContextAddArc(context, p[i], chartLineOffsetY - width + chartLineGap * j, 2, 0, 2 * M_PI, 1);
+                
+                    [each drawInRect:[self rectForPoint:CGPointMake(p[i], chartLineOffsetY - width + chartLineGap * j) withWidth:textHeight height:textHeight] withAttributes:styleDict];
+                }
+            }
+        }
+    }
+    
+    
+}
+
+- (CGRect)rectForPoint:(CGPoint)aPoint withWidth:(CGFloat)w height:(CGFloat)h
+{
+    return  CGRectMake(aPoint.x - w/2.0, aPoint.y - h/2.0, w, h);
 }
 
 @end

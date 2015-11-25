@@ -8,9 +8,9 @@
 
 #import "GAChartView.h"
 
-CGFloat const lineGap = 10;
-CGFloat const lineOffsetX = 25;
-CGFloat const lineOffsetY = 100;
+CGFloat const chartLineGap = 10;
+CGFloat const chartLineOffsetX = 25;
+CGFloat const chartLineOffsetY = 100;
 
 
 @implementation GAChartView
@@ -47,17 +47,17 @@ CGFloat const lineOffsetY = 100;
     CGContextRef context = UIGraphicsGetCurrentContext();
     for (int i = 0; i < lineCount; i++)
     {
-        CGFloat delt = i * lineGap;
-        CGContextMoveToPoint(context, lineOffsetX , lineOffsetY + delt);
-        CGContextAddLineToPoint(context, self.width - lineOffsetX, lineOffsetY + delt);
+        CGFloat delt = i * chartLineGap;
+        CGContextMoveToPoint(context, chartLineOffsetX , chartLineOffsetY + delt);
+        CGContextAddLineToPoint(context, self.width - chartLineOffsetX, chartLineOffsetY + delt);
     }
     
-    CGFloat sectionWidth = (self.width - lineOffsetX * 2)/_sectionCount;
+    CGFloat sectionWidth = (self.width - chartLineOffsetX * 2)/_sectionCount;
      for (int i = 0; i <= _sectionCount; i++)
     {
         CGFloat delt = i * sectionWidth;
-        CGContextMoveToPoint(context, lineOffsetX + delt, lineOffsetY);
-        CGContextAddLineToPoint(context, lineOffsetX + delt, lineOffsetY + (lineCount - 1) * lineGap);
+        CGContextMoveToPoint(context, chartLineOffsetX + delt, chartLineOffsetY);
+        CGContextAddLineToPoint(context, chartLineOffsetX + delt, chartLineOffsetY + (lineCount - 1) * chartLineGap);
     }
     
     CGContextStrokePath(context);

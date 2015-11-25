@@ -30,7 +30,7 @@
     
     GABeatView *beatView = [[GABeatView alloc] initWithFrame:CGRectMake(35, 0, 70, 200)];
     beatView.chord = [GAChord chordByString:@"G:0:320003"];
-    beatView.rhythm = [GARhythm rhythmByString:@"2:8:x,,,,,-,x,,,,"];
+    beatView.rhythm = [GARhythm rhythmByString:@"2:8:,,,,,X-,,X,,,-,X,,,,-,,X,,,"];
     [chart1 addSubview:beatView];
 }
 @end

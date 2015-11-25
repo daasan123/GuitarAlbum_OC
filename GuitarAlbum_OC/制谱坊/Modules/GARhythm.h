@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, RhythmType)
     kRhythmType3_2left,           // |=|-|
     kRhythmType3_2right,          // |-|=|
     kRhythmType4,                 // |=|=|
-    kRhythmType6                  // |_|_|_|_|_|
+    // kRhythmType6                  // |_|_|_|_|_|
 };
 
 @interface GARhythm : NSObject
