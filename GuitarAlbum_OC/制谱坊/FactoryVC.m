@@ -10,6 +10,7 @@
 #import "GAChartView.h"
 #import "GAChordView.h"
 #import "GABeatView.h"
+#import "GAChordEditingView.h"
 
 @implementation FactoryVC
 {
@@ -37,5 +38,9 @@
     beat2.chord = [GAChord chordByString:@"C:0:032010"];
     beat2.rhythm = [GARhythm rhythmByString:@"1:8:,0-0,5-2,0-0,2"];
     [chart1 addSubview:beat2];
+    
+    GAChordEditingView *chordEditingView = [[GAChordEditingView alloc] initWithFrame:CGRectMake(100, 500, 100, 100) andChord:nil];
+    [self.view addSubview:chordEditingView];
+    
 }
 @end

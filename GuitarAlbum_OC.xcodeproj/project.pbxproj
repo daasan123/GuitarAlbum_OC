@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48004C611C05CDE20073D4BC /* GAChordEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48004C601C05CDE20073D4BC /* GAChordEditingView.m */; };
 		D00C696A1C018DAF00093933 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69691C018DAF00093933 /* main.m */; };
 		D00C696D1C018DAF00093933 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C696C1C018DAF00093933 /* AppDelegate.m */; };
 		D00C69731C018DAF00093933 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00C69711C018DAF00093933 /* Main.storyboard */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48004C5F1C05CDE20073D4BC /* GAChordEditingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAChordEditingView.h; sourceTree = "<group>"; };
+		48004C601C05CDE20073D4BC /* GAChordEditingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAChordEditingView.m; sourceTree = "<group>"; };
 		D00C69651C018DAF00093933 /* GuitarAlbum_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuitarAlbum_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00C69691C018DAF00093933 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D00C696B1C018DAF00093933 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				D00C69B71C01902900093933 /* GABeatView.m */,
 				D00C69B91C01903500093933 /* GAChordView.h */,
 				D00C69BA1C01903500093933 /* GAChordView.m */,
+				48004C5F1C05CDE20073D4BC /* GAChordEditingView.h */,
+				48004C601C05CDE20073D4BC /* GAChordEditingView.m */,
 				D0FF169A1C035F06003C4186 /* GARhythmView.h */,
 				D0FF169B1C035F06003C4186 /* GARhythmView.m */,
 			);
@@ -372,6 +377,7 @@
 			files = (
 				D0762AF81C01969700924A6D /* UIView+Extension.m in Sources */,
 				D0762AFB1C01EE7F00924A6D /* GARhythm.m in Sources */,
+				48004C611C05CDE20073D4BC /* GAChordEditingView.m in Sources */,
 				D00C69B81C01902900093933 /* GABeatView.m in Sources */,
 				D00C69BB1C01903500093933 /* GAChordView.m in Sources */,
 				D00C69AB1C018EFE00093933 /* AlbumVC.m in Sources */,
