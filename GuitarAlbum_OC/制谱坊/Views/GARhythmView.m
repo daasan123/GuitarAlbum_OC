@@ -9,7 +9,7 @@
 #import "GARhythmView.h"
 
 CGFloat const rhythmMarkHeight = 10;
-CGFloat const rhythmMarkBottomGap = 20;
+CGFloat const rhythmMarkBottomGap = 50;
 
 @implementation GARhythmView
 {
@@ -174,25 +174,63 @@ CGFloat const rhythmMarkBottomGap = 20;
     }
     CGContextStrokePath(context);
     
-    // 绘制落点
-    CGFloat textHeight = chartLineGap;
-    NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    [style setAlignment:NSTextAlignmentCenter];
-    NSDictionary *styleDict = @{NSFontAttributeName:[UIFont systemFontOfSize:textHeight/1.193], NSParagraphStyleAttributeName:style};
-    for (NSInteger i = 0; i < sizeof(p)/sizeof(NSInteger); i ++)
+    // 扫弦（@"1:8:6,1-1,6-3,1-1,3"）
+    if (_rhythm.style == kRhythmStyleStrum)
     {
-        if (_rhythm.points.count > i)
+        for (NSInteger i = 0; i < sizeof(p)/sizeof(NSInteger); i ++)
         {
-            NSArray *group = _rhythm.points[i];
-            for (NSInteger j = 0; j < group.count; j ++)
+            if (_rhythm.points.count > i)
             {
-                NSString *each = group[j];
-                if (each.length > 0)
+                NSArray *group = _rhythm.points[i];
+                if (group.count < 2)
                 {
-//                    CGContextMoveToPoint(context, p[i], chartLineOffsetY - width + chartLineGap * j);
-//                    CGContextAddArc(context, p[i], chartLineOffsetY - width + chartLineGap * j, 2, 0, 2 * M_PI, 1);
+                    NSLog(@"扫弦格式错误");
+                    return;
+                }
+                // 扫弦延音
+                if ([group[0] length] == 0 || [group[1] length] == 0)
+                {
+                    continue;
+                }
+                NSInteger start = [group[0] integerValue];
+                if (start > 5) start = 5;if (start < 0) start = 0;
+                NSInteger end = [group[1] integerValue];
+                if (end > 5) end = 5;if (end < 0) end = 0;
+                CGFloat tmp = chartLineOffsetY - width + end * chartLineGap;
+                CGFloat tmpDelt = ((end > start) ? -10 : 10);
+                CGContextMoveToPoint(context, p[i], chartLineOffsetY - width + start * chartLineGap);
+                CGContextAddLineToPoint(context, p[i], tmp);
+                // 箭头
+                CGContextAddLineToPoint(context, p[i] - 5, tmp + tmpDelt);
+                CGContextMoveToPoint(context, p[i], tmp);
+                CGContextAddLineToPoint(context, p[i] + 5, tmp + tmpDelt);
                 
-                    [each drawInRect:[self rectForPoint:CGPointMake(p[i], chartLineOffsetY - width + chartLineGap * j) withWidth:textHeight height:textHeight] withAttributes:styleDict];
+            }
+        }
+        CGContextStrokePath(context);
+    }
+    // 分解和弦绘制落点（@"2:8:,,,,,X-,,X,,,-,X,,,,-,,X,,,"）
+    else if (_rhythm.style == kRhythmStylePoint)
+    {
+        CGFloat textHeight = chartLineGap;
+        NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+        [style setAlignment:NSTextAlignmentCenter];
+        NSDictionary *styleDict = @{NSFontAttributeName:[UIFont systemFontOfSize:textHeight/1.193], NSParagraphStyleAttributeName:style};
+        for (NSInteger i = 0; i < sizeof(p)/sizeof(NSInteger); i ++)
+        {
+            if (_rhythm.points.count > i)
+            {
+                NSArray *group = _rhythm.points[i];
+                for (NSInteger j = 0; j < group.count; j ++)
+                {
+                    NSString *each = group[j];
+                    if (each.length > 0)
+                    {
+    //                    CGContextMoveToPoint(context, p[i], chartLineOffsetY - width + chartLineGap * j);
+    //                    CGContextAddArc(context, p[i], chartLineOffsetY - width + chartLineGap * j, 2, 0, 2 * M_PI, 1);
+                    
+                        [each drawInRect:[self rectForPoint:CGPointMake(p[i], chartLineOffsetY - width + chartLineGap * j) withWidth:textHeight height:textHeight] withAttributes:styleDict];
+                    }
                 }
             }
         }

@@ -28,9 +28,14 @@
     
     [_scrollView addSubview:chart1];
     
-    GABeatView *beatView = [[GABeatView alloc] initWithFrame:CGRectMake(35, 0, 70, 200)];
-    beatView.chord = [GAChord chordByString:@"G:0:320003"];
-    beatView.rhythm = [GARhythm rhythmByString:@"2:8:,,,,,X-,,X,,,-,X,,,,-,,X,,,"];
-    [chart1 addSubview:beatView];
+    GABeatView *beat1 = [[GABeatView alloc] initWithFrame:CGRectMake(35, 0, 70, 200)];
+    beat1.chord = [GAChord chordByString:@"G:0:320003"];
+    beat1.rhythm = [GARhythm rhythmByString:@"2:8:,,,,,X-,,X,,,-,X,,,,-,,X,,,"];
+    [chart1 addSubview:beat1];
+    
+    GABeatView *beat2 = [[GABeatView alloc] initWithFrame:CGRectMake(35 + 80, 0, 70, 200)];
+    beat2.chord = [GAChord chordByString:@"C:0:032010"];
+    beat2.rhythm = [GARhythm rhythmByString:@"1:8:,0-0,5-2,0-0,2"];
+    [chart1 addSubview:beat2];
 }
 @end

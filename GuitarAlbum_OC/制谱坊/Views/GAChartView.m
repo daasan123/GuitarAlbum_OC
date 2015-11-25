@@ -10,7 +10,7 @@
 
 CGFloat const chartLineGap = 10;
 CGFloat const chartLineOffsetX = 25;
-CGFloat const chartLineOffsetY = 100;
+CGFloat const chartLineOffsetY = 80;
 
 
 @implementation GAChartView
