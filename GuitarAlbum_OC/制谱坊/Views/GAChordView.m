@@ -12,7 +12,7 @@ CGFloat const nameLabelPercent = 0.4;
 
 @implementation GAChordView
 {
-    GAChord *_chord;
+    UILabel *nameLabel;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame andChord:(GAChord *)aChord
@@ -24,7 +24,7 @@ CGFloat const nameLabelPercent = 0.4;
         self.backgroundColor = [UIColor clearColor];
         
         CGFloat labelHeight = frame.size.height * nameLabelPercent;
-        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, labelHeight)];
+        nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, labelHeight)];
         nameLabel.textAlignment = NSTextAlignmentCenter;
         nameLabel.font = [UIFont systemFontOfSize:labelHeight / 1.2];
         nameLabel.text = _chord.name;
@@ -37,6 +37,9 @@ CGFloat const nameLabelPercent = 0.4;
 
 - (void)drawRect:(CGRect)rect
 {
+    nameLabel.text = _chord.name;
+    
+    
     NSInteger lineCount;
     CGFloat lineWidth = 1;
     switch (_chord.type)

@@ -16,6 +16,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // 加载和弦库
+    [GAChordLibrary sharedLibrary];
     // Override point for customization after application launch.
     return YES;
 }

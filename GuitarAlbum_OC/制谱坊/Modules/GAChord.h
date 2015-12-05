@@ -20,7 +20,8 @@ typedef NS_ENUM(NSInteger, ChordType) {
 @property (nonatomic, assign) ChordType type;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, assign) NSInteger baseTone;
-@property (nonatomic, strong) NSArray *points;
+@property (nonatomic, strong) NSMutableArray *points;
 
 + (GAChord *)chordByString:(NSString *)aString;
+- (NSString *)chordString;
 @end

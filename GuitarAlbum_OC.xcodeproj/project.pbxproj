@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		48004C611C05CDE20073D4BC /* GAChordEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48004C601C05CDE20073D4BC /* GAChordEditingView.m */; };
+		D00049CF1C13267700E4D657 /* Chords.plist in Resources */ = {isa = PBXBuildFile; fileRef = D00049CE1C13267700E4D657 /* Chords.plist */; };
+		D00049D21C13283000E4D657 /* GAChordLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = D00049D11C13283000E4D657 /* GAChordLibrary.m */; };
 		D00C696A1C018DAF00093933 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69691C018DAF00093933 /* main.m */; };
 		D00C696D1C018DAF00093933 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C696C1C018DAF00093933 /* AppDelegate.m */; };
 		D00C69731C018DAF00093933 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00C69711C018DAF00093933 /* Main.storyboard */; };
@@ -46,6 +48,9 @@
 /* Begin PBXFileReference section */
 		48004C5F1C05CDE20073D4BC /* GAChordEditingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAChordEditingView.h; sourceTree = "<group>"; };
 		48004C601C05CDE20073D4BC /* GAChordEditingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAChordEditingView.m; sourceTree = "<group>"; };
+		D00049CE1C13267700E4D657 /* Chords.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Chords.plist; sourceTree = "<group>"; };
+		D00049D01C13283000E4D657 /* GAChordLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAChordLibrary.h; sourceTree = "<group>"; };
+		D00049D11C13283000E4D657 /* GAChordLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAChordLibrary.m; sourceTree = "<group>"; };
 		D00C69651C018DAF00093933 /* GuitarAlbum_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuitarAlbum_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00C69691C018DAF00093933 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D00C696B1C018DAF00093933 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +115,7 @@
 		D00C695C1C018DAF00093933 = {
 			isa = PBXGroup;
 			children = (
+				D00049CE1C13267700E4D657 /* Chords.plist */,
 				D00C69671C018DAF00093933 /* GuitarAlbum_OC */,
 				D00C69811C018DAF00093933 /* GuitarAlbum_OCTests */,
 				D00C698C1C018DAF00093933 /* GuitarAlbum_OCUITests */,
@@ -135,6 +141,8 @@
 				D00C69A81C018EC800093933 /* 制谱坊 */,
 				D00C696B1C018DAF00093933 /* AppDelegate.h */,
 				D00C696C1C018DAF00093933 /* AppDelegate.m */,
+				D00049D01C13283000E4D657 /* GAChordLibrary.h */,
+				D00049D11C13283000E4D657 /* GAChordLibrary.m */,
 				D00C69C01C0191E100093933 /* Constant.h */,
 				D00C69711C018DAF00093933 /* Main.storyboard */,
 				D00C69741C018DAF00093933 /* Assets.xcassets */,
@@ -349,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00C69781C018DAF00093933 /* LaunchScreen.storyboard in Resources */,
+				D00049CF1C13267700E4D657 /* Chords.plist in Resources */,
 				D00C69751C018DAF00093933 /* Assets.xcassets in Resources */,
 				D00C69731C018DAF00093933 /* Main.storyboard in Resources */,
 			);
@@ -380,6 +389,7 @@
 				48004C611C05CDE20073D4BC /* GAChordEditingView.m in Sources */,
 				D00C69B81C01902900093933 /* GABeatView.m in Sources */,
 				D00C69BB1C01903500093933 /* GAChordView.m in Sources */,
+				D00049D21C13283000E4D657 /* GAChordLibrary.m in Sources */,
 				D00C69AB1C018EFE00093933 /* AlbumVC.m in Sources */,
 				D00C696D1C018DAF00093933 /* AppDelegate.m in Sources */,
 				D00C69BE1C01906500093933 /* GAChord.m in Sources */,

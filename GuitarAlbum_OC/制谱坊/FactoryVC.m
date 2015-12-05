@@ -20,6 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height - 200)];
     [_scrollView showBorder];
     [self.view addSubview:_scrollView];
@@ -39,7 +40,7 @@
     beat2.rhythm = [GARhythm rhythmByString:@"1:8:,0-0,5-2,0-0,2"];
     [chart1 addSubview:beat2];
     
-    GAChordEditingView *chordEditingView = [[GAChordEditingView alloc] initWithFrame:CGRectMake(100, 500, 100, 100) andChord:nil];
+    GAChordEditingView *chordEditingView = [[GAChordEditingView alloc] initWithFrame:CGRectMake(100, 500, 100, 100) andChord:[GAChord chordByString:@":0:000000"]];
     [self.view addSubview:chordEditingView];
     
 }

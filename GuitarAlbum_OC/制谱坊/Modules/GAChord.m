@@ -15,7 +15,8 @@
     self = [super init];
     if (self)
     {
-        
+        _points = [[NSMutableArray alloc] init];
+        _name = @"";
     }
     return self;
 }
@@ -28,15 +29,27 @@
         chord.name = tmpArray[0];
         chord.baseTone = [tmpArray[1] integerValue];
         NSString *pointsString = tmpArray[2];
-        NSMutableArray *tmpPoints = [NSMutableArray array];
         for (NSInteger i = 0; i < pointsString.length; i++)
         {
-            [tmpPoints addObject:[pointsString substringWithRange:NSMakeRange(i, 1)]];
+            [chord.points addObject:[pointsString substringWithRange:NSMakeRange(i, 1)]];
         }
-        chord.points = [NSArray arrayWithArray:tmpPoints];
-        chord.type = tmpPoints.count >4 ? kChordTypeGuitar : kChordTypeUke;
+        chord.type = chord.points.count >4 ? kChordTypeGuitar : kChordTypeUke;
     }
     
     return chord;
 }
+
+- (NSString *)chordString
+{
+    NSMutableString *chordString = [[NSMutableString alloc] init];
+    //[chordString appendString:_name];
+    [chordString appendString:[NSString stringWithFormat:@"%zd", _baseTone]];
+    [chordString appendString:@":"];
+    for (NSInteger i = 0; i < _points.count; i ++)
+    {
+        [chordString appendString:_points[i]];
+    }
+    return chordString;
+}
+
 @end

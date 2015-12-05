@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "GAChord.h"
 
-
+extern CGFloat const nameLabelPercent;
 
 @interface GAChordView : UIView
 - (instancetype)initWithFrame:(CGRect)frame andChord:(GAChord *)aChord;
-
+@property (nonatomic, strong) GAChord *chord;
 @end
