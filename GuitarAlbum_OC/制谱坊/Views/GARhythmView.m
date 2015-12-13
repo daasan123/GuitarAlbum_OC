@@ -10,10 +10,11 @@
 
 CGFloat const rhythmMarkHeight = 10;
 CGFloat const rhythmMarkBottomGap = 50;
+CGFloat const rhythmPointCountMax = 4;
 
 @implementation GARhythmView
 {
-    GARhythm *_rhythm;
+   
 }
 
 - (instancetype)initWithFrame:(CGRect)aFrame andRhythm:(GARhythm *)aRhythm
@@ -21,11 +22,18 @@ CGFloat const rhythmMarkBottomGap = 50;
     self = [super initWithFrame:aFrame];
     if (self)
     {
+        p = (CGFloat *)malloc(sizeof(CGFloat) * rhythmPointCountMax);
+        memset(p, 0, sizeof(CGFloat) * rhythmPointCountMax);
         _rhythm = aRhythm;
         self.backgroundColor = [UIColor clearColor];
-        [self showBorder];
+        [self showBorderWithColor:[UIColor blueColor] andWidth:1];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    free(p);
 }
 
 - (void)drawRect:(CGRect)rect
@@ -41,7 +49,12 @@ CGFloat const rhythmMarkBottomGap = 50;
     CGFloat yBottom = height - rhythmMarkBottomGap;
     CGFloat gap = width / 4.0;
     CGFloat deltHeight = rhythmMarkHeight/3.0;// 双线高度增量
-    CGFloat p[4] = {0, 0, 0, 0};
+    
+//    for (NSInteger i = 0; i < 4; i ++)
+//    {
+//        p[i] = 0;
+//    }
+    
     switch (_rhythm.type)
     {
         // |
@@ -177,7 +190,7 @@ CGFloat const rhythmMarkBottomGap = 50;
     // 扫弦（@"1:8:6,1-1,6-3,1-1,3"）
     if (_rhythm.style == kRhythmStyleStrum)
     {
-        for (NSInteger i = 0; i < sizeof(p)/sizeof(NSInteger); i ++)
+        for (NSInteger i = 0; i < rhythmPointCountMax; i ++)
         {
             if (_rhythm.points.count > i)
             {
@@ -216,7 +229,8 @@ CGFloat const rhythmMarkBottomGap = 50;
         NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
         [style setAlignment:NSTextAlignmentCenter];
         NSDictionary *styleDict = @{NSFontAttributeName:[UIFont systemFontOfSize:textHeight/1.193], NSParagraphStyleAttributeName:style};
-        for (NSInteger i = 0; i < sizeof(p)/sizeof(NSInteger); i ++)
+        
+        for (NSInteger i = 0; i < rhythmPointCountMax; i ++)
         {
             if (_rhythm.points.count > i)
             {

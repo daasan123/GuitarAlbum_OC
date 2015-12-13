@@ -11,6 +11,7 @@
 #import "GAChordView.h"
 #import "GABeatView.h"
 #import "GAChordEditingView.h"
+#import "GARhythmEditingView.h"
 
 @implementation FactoryVC
 {
@@ -42,6 +43,10 @@
     
     GAChordEditingView *chordEditingView = [[GAChordEditingView alloc] initWithFrame:CGRectMake(100, 500, 100, 100) andChord:[GAChord chordByString:@":0:000000"]];
     [self.view addSubview:chordEditingView];
+    
+    
+    GARhythmEditingView *rhythmEditingView = [[GARhythmEditingView alloc] initWithFrame:CGRectMake(100, 630, 70, 130) andRhythm:[GARhythm rhythmByString:@"2:8:,,,,,X-,,X,,,-,X,,,,-,,X,,,"]];
+    [self.view addSubview:rhythmEditingView];
     
 }
 @end

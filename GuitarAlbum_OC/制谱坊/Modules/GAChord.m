@@ -9,6 +9,8 @@
 #import "GAChord.h"
 
 @implementation GAChord
+
+#pragma mark - LifeCycle
 // G:0:320003
 - (instancetype)init
 {
@@ -20,6 +22,7 @@
     }
     return self;
 }
+
 + (GAChord *)chordByString:(NSString *)aString
 {
     GAChord *chord = [[GAChord alloc] init];
@@ -29,7 +32,7 @@
         chord.name = tmpArray[0];
         chord.baseTone = [tmpArray[1] integerValue];
         NSString *pointsString = tmpArray[2];
-        for (NSInteger i = 0; i < pointsString.length; i++)
+        for (NSInteger i = 0; i < pointsString.length; i ++)
         {
             [chord.points addObject:[pointsString substringWithRange:NSMakeRange(i, 1)]];
         }

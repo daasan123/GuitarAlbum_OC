@@ -10,5 +10,10 @@
 #import "GARhythm.h"
 
 @interface GARhythmView : UIView
+{
+@public
+    CGFloat *p;
+}
+@property (nonatomic, strong) GARhythm *rhythm;
 - (instancetype)initWithFrame:(CGRect)aFrame andRhythm:(GARhythm *)aRhythm;
 @end
