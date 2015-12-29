@@ -30,9 +30,15 @@ CGFloat const nameLabelPercent = 0.4;
         nameLabel.text = _chord.name;
         [self addSubview:nameLabel];
         
-        [self showBorder];
+        //[self showBorder];
     }
     return self;
+}
+
+- (void)setChord:(GAChord *)chord
+{
+    _chord = chord;
+    [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)rect
