@@ -33,11 +33,11 @@ CGFloat const rhythmLineOffsetY = 50;
     
     CGFloat lineWidth = 1;
     CGFloat deltX = (self.width - 2.0*self->p[0])/(verticalCount - 1);
-    CGFloat deltY = chartLineGap + lineWidth;
+    CGFloat deltY = self.rhythmLineGap + lineWidth;
     NSLog(@"deltX:%lf, deltY:%lf", deltX, deltY);
     
     NSInteger x = (point.x - self->p[0] + deltX/2.0)/deltX;
-    NSInteger y = (point.y - (chartLineOffsetY - self.width) + deltY/2.0)/deltY;
+    NSInteger y = (point.y - self.rhythmLineOffsetY + deltY/2.0)/deltY;
     
     NSLog(@"x:%zd, y:%zd", x, y);
     
@@ -64,7 +64,7 @@ CGFloat const rhythmLineOffsetY = 50;
     CGContextRef context = UIGraphicsGetCurrentContext();
     for (int i = 0; i < lineCount; i++)
     {
-        CGFloat y = chartLineOffsetY - self.width + i * chartLineGap;
+        CGFloat y = self.rhythmLineOffsetY + i * self.rhythmLineGap;
         CGContextMoveToPoint(context, 0 , y);
         CGContextAddLineToPoint(context, self.width, y);
     }

@@ -17,6 +17,7 @@
     if (self)
     {
         self.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0.3];
+        [self showBorderWithColor:[UIColor redColor] andWidth:1];
     }
     return self;
 }

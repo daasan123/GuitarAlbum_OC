@@ -15,5 +15,8 @@
     CGFloat *p;
 }
 @property (nonatomic, strong) GARhythm *rhythm;
+@property (nonatomic, assign) CGFloat rhythmLineGap;
+@property (nonatomic, assign) CGFloat rhythmLineOffsetY;
+
 - (instancetype)initWithFrame:(CGRect)aFrame andRhythm:(GARhythm *)aRhythm;
 @end

@@ -9,7 +9,7 @@
 #import "GAEditingView.h"
 #import "GAEditingViewChordCell.h"
 #import "GAChordEditingView.h"
-
+#import "GARhythmEditingView.h"
 
 @implementation GAEditingView
 {
@@ -17,6 +17,7 @@
     NSMutableArray *_chordArray;
     
     GAChordEditingView *_chordEditingView;
+    GARhythmEditingView *_rhythmEditingView;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -59,6 +60,12 @@
     // 和弦编辑
     _chordEditingView = [[GAChordEditingView alloc] initWithFrame:CGRectMake(100, 0, 200, 200) andChord:_chordArray[0]];
     [self addSubview:_chordEditingView];
+    
+    // 节奏编辑视图
+    _rhythmEditingView = [[GARhythmEditingView alloc] initWithFrame:CGRectMake(500, 0, 100, 200) andRhythm:[GARhythm rhythmByString:@"2:8:,,,,,X-,,X,,,-,X,,,,-,,X,,,"]];
+    _rhythmEditingView.rhythmLineOffsetY = 40;
+    _rhythmEditingView.rhythmLineGap = 20;
+    [self addSubview:_rhythmEditingView];
     
 }
 

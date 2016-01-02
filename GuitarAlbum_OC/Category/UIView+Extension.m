@@ -108,7 +108,7 @@
 {
     CGFloat c[4]={0.0,0.0,0.0,1.0};
     [aColor getRed:c green:c+1 blue:c+2 alpha:c+3];
-    [self showBorderWithRGB:c width:2];
+    [self showBorderWithRGB:c width:aWidth];
 }
 
 @end

@@ -42,16 +42,11 @@
     beat2.rhythm = [GARhythm rhythmByString:@"1:8:,0-0,5-2,0-0,2"];
     [chart1 addSubview:beat2];
     
-    GAChordEditingView *chordEditingView = [[GAChordEditingView alloc] initWithFrame:CGRectMake(100, 500, 100, 100) andChord:[GAChord chordByString:@":0:000000"]];
-    [self.view addSubview:chordEditingView];
     
-    
-    GARhythmEditingView *rhythmEditingView = [[GARhythmEditingView alloc] initWithFrame:CGRectMake(100, 630, 70, 130) andRhythm:[GARhythm rhythmByString:@"2:8:,,,,,X-,,X,,,-,X,,,,-,,X,,,"]];
-    [self.view addSubview:rhythmEditingView];
     
     
     GAEditingView *editingView = [[GAEditingView alloc] initWithFrame:CGRectMake(0, 500, 768, 200)];
-    [editingView showBorderWithColor:[UIColor blueColor] andWidth:4];
+    [editingView showBorderWithColor:[UIColor yellowColor] andWidth:1];
     
     [self.view addSubview:editingView];
     

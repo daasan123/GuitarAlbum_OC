@@ -30,7 +30,7 @@ CGFloat const nameLabelPercent = 0.4;
         nameLabel.text = _chord.name;
         [self addSubview:nameLabel];
         
-        //[self showBorder];
+        [self showBorderWithColor:[UIColor purpleColor] andWidth:2];
     }
     return self;
 }
