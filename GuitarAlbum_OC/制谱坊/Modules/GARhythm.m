@@ -9,6 +9,7 @@
 #import "GARhythm.h"
 
 @implementation GARhythm
+
 // 2:1:x,x,x,,,x
 // 2:2:x,,,,,-,x,,,,
 + (GARhythm *)rhythmByString:(NSString *)aString
@@ -24,11 +25,54 @@
         NSArray *tmpArray = [tmpString componentsSeparatedByString:@"-"];
         for (NSString *each in tmpArray)
         {
-            [tmpPoints addObject:[each componentsSeparatedByString:@","]];
+            NSArray *points = [each componentsSeparatedByString:@","];
+            
+            [tmpPoints addObject:[[self mutablePointsFromPoints:points] mutableCopy]];
         }
-        beat.points = tmpPoints;
-        NSLog(@"beatPoints:%@", beat.points);
+        beat.points = [tmpPoints mutableCopy];
     }
     return beat;
 }
+
+- (void)setPoints:(NSMutableArray *)points
+{
+    if (_points != points)
+    {
+        if (!_points)
+        {
+            _points = [[NSMutableArray alloc] init];
+        }
+        [_points removeAllObjects];
+        [_points addObjectsFromArray:points];
+    }
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    GARhythm *rhythm = [[GARhythm allocWithZone:zone] init];
+    rhythm.style = self.style;
+    rhythm.type = self.type;
+    
+    NSMutableArray *mPointsGroup = [[NSMutableArray alloc] init];
+    
+    for (NSArray *points in self.points)
+    {
+        [mPointsGroup addObject:[[[self class] mutablePointsFromPoints:points] mutableCopy]];
+    }
+    rhythm.points = [mPointsGroup mutableCopy];
+    return rhythm;
+    
+}
+
++ (NSMutableArray *)mutablePointsFromPoints:(NSArray *)points
+{
+    NSMutableArray *mPoints = [[NSMutableArray alloc] initWithCapacity:points.count];
+    for (NSString *eachPoint in points)
+    {
+        NSMutableString *point = mString(eachPoint);
+        [mPoints addObject:[point copy]];
+    }
+    return mPoints;
+}
+
 @end

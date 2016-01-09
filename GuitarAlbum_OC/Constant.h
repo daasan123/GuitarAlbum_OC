@@ -11,6 +11,8 @@
 #ifndef Constant_h
 #define Constant_h
 
+#define mString(A) [[NSMutableString alloc] initWithString:(A)]
+
 extern CGFloat const chartLineGap;
 extern CGFloat const chartLineOffsetX;
 extern CGFloat const chartLineOffsetY;

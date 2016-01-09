@@ -35,22 +35,25 @@ CGFloat const rhythmLineOffsetY = 50;
     CGFloat deltX = (self.width - 2.0*self->p[0])/(verticalCount - 1);
     CGFloat deltY = self.rhythmLineGap + lineWidth;
     NSLog(@"deltX:%lf, deltY:%lf", deltX, deltY);
-    
-    NSInteger x = (point.x - self->p[0] + deltX/2.0)/deltX;
+    NSInteger x = 0;
+    if (deltX > 0)
+    {
+        x = (point.x - self->p[0] + deltX/2.0)/deltX;
+    }
     NSInteger y = (point.y - self.rhythmLineOffsetY + deltY/2.0)/deltY;
     
     NSLog(@"x:%zd, y:%zd", x, y);
     
     NSArray *points = self.rhythm.points;
     NSString *tmpPoint = points[x][y];
-    NSLog(@"tmpPoint:%@", tmpPoint);
+
     if ([tmpPoint isEqualToString:@""])
     {
-        points[x][y] = @"X";
+        [points[x] replaceObjectAtIndex:y withObject:mString(@"X")];
     }
     else
     {
-        points[x][y] = @"";
+        [points[x] replaceObjectAtIndex:y withObject:mString(@"")];
     }
     [self setNeedsDisplay];
     

@@ -37,6 +37,17 @@ CGFloat const rhythmLineGap = 10;
     return self;
 }
 
+- (void)setRhythm:(GARhythm *)rhythm
+{
+    if (_rhythm != rhythm)
+    {
+        _rhythm = nil;
+        _rhythm = [rhythm copy];
+        [self setNeedsDisplay];
+    }
+    
+}
+
 - (void)setRhythmLineGap:(CGFloat)rhythmLineGap
 {
     if (_rhythmLineGap != rhythmLineGap)
@@ -74,10 +85,10 @@ CGFloat const rhythmLineGap = 10;
     CGFloat gap = width / 4.0;
     CGFloat deltHeight = rhythmMarkHeight/3.0;// 双线高度增量
     
-//    for (NSInteger i = 0; i < 4; i ++)
-//    {
-//        p[i] = 0;
-//    }
+    for (NSInteger i = 0; i < 4; i ++)
+    {
+        p[i] = 0;
+    }
     
     switch (_rhythm.type)
     {

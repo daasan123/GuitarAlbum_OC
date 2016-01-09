@@ -23,6 +23,7 @@
 		D00C69B81C01902900093933 /* GABeatView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69B71C01902900093933 /* GABeatView.m */; };
 		D00C69BB1C01903500093933 /* GAChordView.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69BA1C01903500093933 /* GAChordView.m */; };
 		D00C69BE1C01906500093933 /* GAChord.m in Sources */ = {isa = PBXBuildFile; fileRef = D00C69BD1C01906500093933 /* GAChord.m */; };
+		D01A21351C38BEB0004647A2 /* GAEditingViewRhythmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D01A21341C38BEB0004647A2 /* GAEditingViewRhythmCell.m */; };
 		D0762AF81C01969700924A6D /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D0762AF71C01969700924A6D /* UIView+Extension.m */; };
 		D0762AFB1C01EE7F00924A6D /* GARhythm.m in Sources */ = {isa = PBXBuildFile; fileRef = D0762AFA1C01EE7F00924A6D /* GARhythm.m */; };
 		D0FE6C8E1C32CBF400D8B0AA /* GAEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FE6C8D1C32CBF400D8B0AA /* GAEditingView.m */; };
@@ -82,6 +83,8 @@
 		D00C69BD1C01906500093933 /* GAChord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAChord.m; sourceTree = "<group>"; };
 		D00C69BF1C01912100093933 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D00C69C01C0191E100093933 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		D01A21331C38BEB0004647A2 /* GAEditingViewRhythmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAEditingViewRhythmCell.h; sourceTree = "<group>"; };
+		D01A21341C38BEB0004647A2 /* GAEditingViewRhythmCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAEditingViewRhythmCell.m; sourceTree = "<group>"; };
 		D0762AF61C01969700924A6D /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		D0762AF71C01969700924A6D /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		D0762AF91C01EE7F00924A6D /* GARhythm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GARhythm.h; sourceTree = "<group>"; };
@@ -255,6 +258,8 @@
 				D0FE6C8D1C32CBF400D8B0AA /* GAEditingView.m */,
 				D0FE6C8F1C32CE3500D8B0AA /* GAEditingViewChordCell.h */,
 				D0FE6C901C32CE3500D8B0AA /* GAEditingViewChordCell.m */,
+				D01A21331C38BEB0004647A2 /* GAEditingViewRhythmCell.h */,
+				D01A21341C38BEB0004647A2 /* GAEditingViewRhythmCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				D00C69BE1C01906500093933 /* GAChord.m in Sources */,
 				D00C696A1C018DAF00093933 /* main.m in Sources */,
 				D00C69AE1C018F3700093933 /* FactoryVC.m in Sources */,
+				D01A21351C38BEB0004647A2 /* GAEditingViewRhythmCell.m in Sources */,
 				D0FF169C1C035F06003C4186 /* GARhythmView.m in Sources */,
 				D00C69B51C01901400093933 /* GAChartView.m in Sources */,
 			);

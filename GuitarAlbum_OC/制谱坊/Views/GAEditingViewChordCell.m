@@ -30,10 +30,10 @@ NSString * const editingViewChordCellID = @"EditingViewChordCellID";
 {
     if (!_chordView)
     {
-        _chordView = [[GAChordView alloc] initWithFrame:CGRectMake(2, 0, 50, 50) andChord:chord];
+        _chordView = [[GAChordView alloc] initWithFrame:CGRectMake(0, 2, 50, 50) andChord:chord];
         [self.contentView addSubview:_chordView];
     }
-    //_chordView.chord = chord;
+    _chordView.chord = chord;
 }
 
 - (GAChord *)chord

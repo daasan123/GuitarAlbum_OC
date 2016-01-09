@@ -29,10 +29,10 @@ typedef NS_ENUM(NSInteger, RhythmType)
     // kRhythmType6                  // |_|_|_|_|_|
 };
 
-@interface GARhythm : NSObject
+@interface GARhythm : NSObject <NSCopying>
 @property (nonatomic, assign) RhythmStyle style;
 @property (nonatomic, assign) RhythmType type;
-@property (nonatomic, strong) NSArray *points;
+@property (nonatomic, copy) NSMutableArray *points;
 
 + (GARhythm *)rhythmByString:(NSString *)aString;
 @end
